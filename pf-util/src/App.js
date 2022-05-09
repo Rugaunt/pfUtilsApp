@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       <NavBar />
       <header className="App-header">
-        <ItemDisplayBox />
+        
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <ItemDisplayBox />Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -28,6 +28,12 @@ function App() {
       </body>
     </div>
   );
+  /*
+  changeActiveCreator = () => {
+    // when this is called, will modify the creatorWidget to display correct creation method
+
+  };
+  */
 }
 
 export default App;
