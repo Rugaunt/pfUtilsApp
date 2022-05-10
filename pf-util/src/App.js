@@ -18,7 +18,7 @@ class App extends Component {
       <NavBar 
         titleOfCreator={this.state.titleOfCreator}
       />
-     
+      <ItemDisplayBox />
       </React.Fragment>
      
     </div>
