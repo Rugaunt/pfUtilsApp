@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBarButton from './navBarButton';
 
+/* TODO possibly move state vars up a level. have to have a think on app operations and check design diagram */
 class NavBar extends Component {
     state = {
         button1: "Wondrous Item",
