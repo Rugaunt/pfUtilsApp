@@ -18,9 +18,12 @@ class App extends Component {
       <NavBar 
         titleOfCreator={this.state.titleOfCreator}
       />
-      
+     
       </React.Fragment>
+     
     </div>
+     
+    
     );
   }
 }

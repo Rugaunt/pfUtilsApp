@@ -12,13 +12,22 @@ class NavBar extends Component {
 
         return (
             
-            <nav className="navbar navbar-light bg-light">
+            <nav className="navbar navbar-dark bg-dark">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    {this.props.titleOfCreator} <span className="badge badge-pill badge-secondary">banana</span>
-                    <NavBarButton 
-                        titleOfCreator={this.state.button1}
-                    />
+                    {this.props.titleOfCreator} Creator
+                    <span className="badge badge-pill badge-secondary">
+                        <NavBarButton 
+                            titleOfCreator={this.state.button1}
+                        />
+                        <NavBarButton 
+                            titleOfCreator={this.state.button2}
+                        />
+                        <NavBarButton 
+                            titleOfCreator={this.state.button3}
+                        />
+                    </span>
+                   
                 </a>
                 
                 

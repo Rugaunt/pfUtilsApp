@@ -3,15 +3,14 @@ import React, { Component } from 'react';
 class NavBarButton extends Component {
     
     render() { 
-        const {titleOfCreator} = this.props.titleOfCreator;
+        
         return (
             <div>
-                
                 <button
                     onClick={() => this.props.onActivate(this.props.titleOfCreator)}
-                    className='btn btn-secondary m-2'
-                >
-                {titleOfCreator}
+                    className='btn btn-secondary m-2'>
+                    {this.props.titleOfCreator}
+                
                 </button>
             </div>
             
