@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import NavBarButton from './navBarButton';
+// import NavBarButton from './navBarButton';
 
-import { Navbar } from 'react-bootstrap';
+// import Navbar from 'react-bootstrap';
 
 
 /* TODO possibly move state vars up a level. have to have a think on app operations and check design diagram */
-class NavBar extends Component {
+class NaviBar extends Component {
     state = {
         button1: "Wondrous Item",
         button2: "Weapon",
@@ -39,4 +39,4 @@ class NavBar extends Component {
     }
 }
  
-export default NavBar;
+export default NaviBar;

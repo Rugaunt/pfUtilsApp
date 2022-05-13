@@ -1,36 +1,26 @@
+import "./App.css";
 
-import './App.css';
-import NavBar from './components/navBar';
-import CreatorWidget from './components/creatorWidget';
-import ItemDisplayBox from './components/itemDisplayBox';
-import ItemDisplayBoxTest from './components/itemDisplayBoxTest';
+// import CreatorWidget from './components/creatorWidget';
+// import ItemDisplayBox from './components/itemDisplayBox';
+// import ItemDisplayBoxTest from './components/itemDisplayBoxTest';
+//import Navbar from './components/navBar/navBar';
 
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
+import NavBar from "./components/navBar/navBar";
 
 class App extends Component {
-  state = { 
-    titleOfCreator : "Wondrous Item"
-  } 
-  render() { 
+  state = {
+    titleOfCreator: "Wondrous Item",
+  };
+  render() {
     return (
-      
-      <React.Fragment>
-      <NavBar 
-        titleOfCreator={this.state.titleOfCreator}
-      />
-      <main className='container'>
-        <ItemDisplayBoxTest />
-      </main>
-      
-      </React.Fragment>
-     
-    
-     
-    
+      <div>
+        <h1>Hello world</h1>
+        <h2>it is {new Date().toLocaleTimeString()}</h2>
+        <NavBar />
+      </div>
     );
   }
 }
 
- 
 export default App;
