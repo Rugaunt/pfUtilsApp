@@ -7,6 +7,7 @@ import "./App.css";
 
 import React, { Component } from "react";
 import NavBar from "./components/navBar/navBar";
+import ItemDisplayBox from "./components/itemDisplayBox";
 
 class App extends Component {
   state = {
@@ -18,6 +19,7 @@ class App extends Component {
         <h1>Hello world</h1>
         <h2>it is {new Date().toLocaleTimeString()}</h2>
         <NavBar />
+        <ItemDisplayBox />
       </div>
     );
   }
