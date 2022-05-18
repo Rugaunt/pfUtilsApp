@@ -12,7 +12,10 @@ import Clock from "./components/clock";
 
 class App extends Component {
   state = {
-    titleOfCreator: "Wondrous Item",
+    activeCreator: "Wondrous Item",
+    button1: "Wondrous Item",
+    button2: "Weapon",
+    button3: "Armor",
   };
   render() {
     return (
@@ -22,6 +25,10 @@ class App extends Component {
         <ItemDisplayBox />
       </div>
     );
+  }
+
+  changeActiveCreator(theCreator) {
+    this.setState({ titleOfCreator: theCreator });
   }
 }
 

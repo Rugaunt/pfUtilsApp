@@ -13,7 +13,7 @@ class NavBarButton extends Component {
   }
 
   onActivate = () => {
-    //do something
+    this.setState({ activeCreator: titleOfCreator });
   };
 }
 
