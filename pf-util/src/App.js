@@ -20,15 +20,22 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <h1>{this.state.activeCreator}</h1>
+        <NavBar
+          activeCreator={this.state.activeCreator}
+          button1={this.state.button1}
+          button2={this.state.button2}
+          button3={this.state.button3}
+          onSelect={this.handleNewCreator}
+        />
         <Clock />
         <ItemDisplayBox />
       </div>
     );
   }
 
-  changeActiveCreator(theCreator) {
-    this.setState({ titleOfCreator: theCreator });
+  handleNewCreator(creatorName) {
+    this.setState({ activeCreator: creatorName });
   }
 }
 

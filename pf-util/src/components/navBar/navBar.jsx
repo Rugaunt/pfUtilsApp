@@ -1,21 +1,28 @@
 import React, { Component } from "react";
 import NavBarButton from "../navBarButton";
+import TestButton from "../testButton";
+/*
+<h1><nav className="NavBarItems">Creator: {this.props.activeCreator}</h1>
+        <NavBarButton buttonTitleIn={this.props.button1} />
+        <NavBarButton buttonTitleIn={this.props.button2} />
+        <NavBarButton buttonTitleIn={this.props.button3} />
+      </nav>
 
+     
+*/
 class NavBar extends Component {
-  constructor() {
-    super(props);
-    this.setState({ button1: this.props.button1 });
-    this.setState({ button2: this.props.button2 });
-    this.setState({ button3: this.props.button3 });
-  }
-
   render() {
     return (
-      <nav className="NavBarItems">
-        <h1>Creator: {this.props.activeCreator}</h1>
-        <NavBarButton titleOfCreator={button1} />
-        <NavBarButton titleOfCreator={button2} />
-        <NavBarButton titleOfCreator={button3} />
+      <nav className="navbar navbar-light bg-light">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            Navbar{" "}
+            <span className="badge badge-pill badge-secondary">
+              <TestButton />
+              <NavBarButton buttonTitleIn="button1" />
+            </span>
+          </a>
+        </div>
       </nav>
     );
   }

@@ -1,20 +1,25 @@
 import React, { Component } from "react";
+/*
 
+*/
 class NavBarButton extends Component {
-  render() {
-    return (
-      <button
-        onClick={() => this.props.onActivate(this.props.titleOfCreator)}
-        className="btn btn-secondary m-2"
-      >
-        {this.props.titleOfCreator}
-      </button>
-    );
+  constructor(props, buttonTitleIn) {
+    super(props);
+    this.state = { buttonTitle: buttonTitleIn };
   }
 
-  onActivate = () => {
-    this.setState({ activeCreator: titleOfCreator });
-  };
+  render() {
+    const { onSelect } = this.props;
+    const buttonName = this.state.buttonTitle;
+    return (
+      <div>
+        <button onClick={() => this.onPress()}>{this.state.buttonName}</button>
+      </div>
+    );
+  }
+  onPress() {
+    alert("its clicking!");
+  }
 }
 
 export default NavBarButton;
