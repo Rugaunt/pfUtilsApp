@@ -19,7 +19,7 @@ class NavBar extends Component {
             Navbar{" "}
             <span className="badge badge-pill badge-secondary">
               <TestButton />
-              <NavBarButton buttonTitleIn="button1" />
+              <NavBarButton buttonTitle="banada" />
             </span>
           </a>
         </div>
