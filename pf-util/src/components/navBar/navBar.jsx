@@ -19,7 +19,10 @@ class NavBar extends Component {
             Navbar{" "}
             <span className="badge badge-pill badge-secondary">
               <TestButton />
-              <NavBarButton buttonTitle="banada" />
+
+              <NavBarButton buttonTitle={this.props.button1} />
+              <NavBarButton buttonTitle={this.props.button2} />
+              <NavBarButton buttonTitle={this.props.button3} />
             </span>
           </a>
         </div>
