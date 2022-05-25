@@ -6,7 +6,9 @@ class NavBarButton extends Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.onPress()}>{this.props.buttonTitle}</button>
+        <button onClick={() => this.props.onSelect(this.props.buttonTitle)}>
+          {this.props.buttonTitle}
+        </button>
       </div>
     );
   }

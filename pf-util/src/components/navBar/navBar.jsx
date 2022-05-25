@@ -7,11 +7,14 @@ import TestButton from "../testButton";
         <NavBarButton buttonTitleIn={this.props.button2} />
         <NavBarButton buttonTitleIn={this.props.button3} />
       </nav>
-
+              <NavBarButton buttonTitle={this.props.button1} />
+              <NavBarButton buttonTitle={this.props.button2} />
+              <NavBarButton buttonTitle={this.props.button3} />
      
 */
 class NavBar extends Component {
   render() {
+    const { creatorList, onSelect } = this.props;
     return (
       <nav className="navbar navbar-light bg-light">
         <div className="container-fluid">
@@ -19,10 +22,9 @@ class NavBar extends Component {
             Navbar{" "}
             <span className="badge badge-pill badge-secondary">
               <TestButton />
-
-              <NavBarButton buttonTitle={this.props.button1} />
-              <NavBarButton buttonTitle={this.props.button2} />
-              <NavBarButton buttonTitle={this.props.button3} />
+              {creatorList.map((barButton) => (
+                <NavBarButton key={creatorList.id} onSelect={onSelect} />
+              ))}
             </span>
           </a>
         </div>

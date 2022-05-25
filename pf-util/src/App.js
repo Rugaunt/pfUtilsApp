@@ -12,7 +12,13 @@ import Clock from "./components/clock";
 
 class App extends Component {
   state = {
+    activeCreatorID: 1,
     activeCreator: "Wondrous Item",
+    creatorList: [
+      { id: 1, value: "Wondrous Item" },
+      { id: 2, value: "Weapon" },
+      { id: 3, value: "Armor" },
+    ],
     button1: "Wondrous Item",
     button2: "Weapon",
     button3: "Armor",
@@ -20,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.activeCreator}</h1>
+        <h1>{this.state.creatorList}</h1>
         <NavBar
           activeCreator={this.state.activeCreator}
           button1={this.state.button1}
@@ -37,6 +43,15 @@ class App extends Component {
   handleNewCreator(creatorName) {
     this.setState({ activeCreator: creatorName });
   }
+
+  handleIncrement = (counter) => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value++;
+    console.log(this.state.counters[index]);
+    this.setState({ counters });
+  };
 }
 
 export default App;
