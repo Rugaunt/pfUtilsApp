@@ -22,7 +22,7 @@ class NavBar extends Component {
             Navbar{" "}
             <span className="badge badge-pill badge-secondary">
               <TestButton />
-              {creatorList.map((barButton) => (
+              {creatorList.map(creatorList => (
                 <NavBarButton key={creatorList.id} onSelect={onSelect} />
               ))}
             </span>

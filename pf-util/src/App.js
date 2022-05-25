@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.creatorList}</h1>
+        <h1>{this.state.activeCreator}</h1>
         <NavBar
           activeCreator={this.state.activeCreator}
           button1={this.state.button1}
